@@ -1,0 +1,84 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <% for(let i=0; i<4; i++){ %>
+                <div id="main-card">
+                    <img id="news-image" src="<%= data[i].urlToImage %>" alt="Image Not Found Click on Title for Full News" class="img-fluid">
+                    <span id="date"><%= data[i].publishedAt.slice(0,10)  %></span>
+    
+                    <span id="title"><a href="<%= data[i].url %>" id="title-link1" target="_blank">
+                            <%= data[i].title %>
+                    </a></span>
+                    
+                    <span id="description">
+                        <%= data[i].content.slice(0,200) %>
+                    </span>
+                </div>
+            <% } %>
+
+            <% for(let i=20; i<30; i++){ %>
+                <div id="card">
+                    <div id="img-container">
+                        <img id="news-image" src="<%= data[i].urlToImage %>" alt="Image Not Found Click on Title for Full News" class="img-fluid">
+                    </div>
+                    <div id="elements">
+                        <span id="date"><%= data[i].publishedAt.slice(0,10)  %></span><br/>
+                        <span id="title-small"><a href="<%= data[i].url %>" id="title-link1" target="_blank">
+                            <%= data[i].title %>
+                    </a></span>
+                    </div>
+                    
+                </div>
+                <% } %>
+            
+
+            
+
+            
+            
+
+        </div>
+        <div class="col-12 col-lg-6">
+            <% for(let i=4; i<20; i++){ %>
+            <div id="card">
+                <div id="img-container">
+                    <img id="news-image" src="<%= data[i].urlToImage %>" alt="Image Not Found Click on Title for Full News" class="img-fluid">
+                </div>
+                <div id="elements">
+                    <span id="date"><%= data[i].publishedAt.slice(0,10)  %></span><br/>
+                    <span id="title-small"><a href="<%= data[i].url %>" id="title-link1" target="_blank">
+                        <%= data[i].title %>
+                </a></span>
+                </div>
+                
+            </div>
+            <% } %>
+
+            <% for(let i=30; i<data.length; i++){ %>
+                <div id="card">
+                    <div id="img-container">
+                        <img id="news-image" src="<%= data[i].urlToImage %>" alt="Image Not Found Click on Title for Full News" class="img-fluid">
+                    </div>
+                    <div id="elements">
+                        <span id="date"><%= data[i].publishedAt.slice(0,10)  %></span><br/>
+                        <span id="title-small"><a href="<%= data[i].url %>" id="title-link1" target="_blank">
+                            <%= data[i].title %>
+                    </a></span>
+                    </div>
+                    
+                </div>
+                <% } %>
+
+            
+
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<%- include('partials/footer.ejs') %>
