@@ -1,7 +1,7 @@
 var express= require("express");
 var router = express.Router({mergeParams: true});
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('38c1056a8bbe4837aaf96a3c3aa6c190');
+const newsapi = new NewsAPI('<YOUR_API_KEY>');
 
 
 
